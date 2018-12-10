@@ -29,4 +29,26 @@ public class WeatherData {
      */
     private float pressure;
 
+    // 定义进来模拟的当天的看板 在构造函数中进行初始化
+    private CurrentConditions currentConditions;
+
+    public WeatherData(CurrentConditions currentConditions) {
+        this.currentConditions = currentConditions;
+    }
+
+    private void dataChange() {
+        currentConditions.update(getTemperature(), getPressure(), getHumidity());
+    }
+
+    /**
+     * 模拟数据变化过程
+     */
+    public void setData(float temperature, float pressure, float humidity) {
+        setTemperature(temperature);
+        setPressure(pressure);
+        setHumidity(humidity);
+
+        dataChange();
+    }
+
 }
