@@ -31,6 +31,8 @@ public class ForcastConditions implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        // TODO 这里还可以对Observable 进行一个筛选和过滤的逻辑
+
         WeatherData.Data data = (WeatherData.Data) arg;
 
         setTemperature(data.getTemperature());

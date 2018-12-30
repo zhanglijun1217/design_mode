@@ -33,8 +33,8 @@ public class WeatherData extends Observable {
 
     private void dataChange() {
         // 使用jdk内置Subject 即Observable类，通知观察者们的时候要
-        setChanged();
-        notifyObservers(new Data(getTemperature(), getHumidity(), getPressure()));
+        super.setChanged();
+        super.notifyObservers(new Data(getTemperature(), getHumidity(), getPressure()));
     }
 
     /**
@@ -49,7 +49,7 @@ public class WeatherData extends Observable {
     }
 
     /**
-     * 通知观察者的数据类
+     * 通知观察者的数据类 这里要是适配JDK内置的Observer接口中的update方法
      */
     @AllArgsConstructor
     @Getter
