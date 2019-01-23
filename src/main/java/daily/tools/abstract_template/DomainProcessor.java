@@ -1,4 +1,4 @@
-package 日常记录.工具代码.abstract_template;
+package daily.tools.abstract_template;
 
 /**
  * 业务处理方法
