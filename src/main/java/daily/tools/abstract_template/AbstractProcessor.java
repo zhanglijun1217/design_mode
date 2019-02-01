@@ -9,7 +9,7 @@ import daily.tools.exception.BizException;
  * @author 夸克
  * @date 2019/1/23 19:46
  */
-public abstract class AbstractProocessor<T> implements DomainProcessor<T> {
+public abstract class AbstractProcessor<T> implements DomainProcessor<T> {
 
     /**
      * 前置处理 主要做一些校验逻辑 编排的时候放在前边

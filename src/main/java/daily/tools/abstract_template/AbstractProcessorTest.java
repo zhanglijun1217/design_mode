@@ -21,11 +21,16 @@ public class AbstractProcessorTest {
         testProcessor.process(exContext);
     }
 
-    private static class TestProcessor extends AbstractProocessor<TestContext> {
+    private static class TestProcessor extends AbstractProcessor<TestContext> {
         @Override
         protected boolean preHandle(TestContext context) {
             // 前置的一个check或者一个前置操作
-            context.setPreStr("pre");
+            String s = contextHolder.get();
+            if (s == null) {
+                throw new RuntimeException("holder中字符串为空");
+            }
+
+            context.setMessage(s);
             return true;
         }
 
@@ -44,11 +49,7 @@ public class AbstractProcessorTest {
 
         @Override
         protected void bizHandle(TestContext context) {
-            String s = contextHolder.get();
-            if (s == null) {
-                throw new RuntimeException("holder中字符串为空");
-            }
-            context.setResult(s.length()>0);
+            context.setResult(context.getMessage().length()>0);
         }
     }
 }

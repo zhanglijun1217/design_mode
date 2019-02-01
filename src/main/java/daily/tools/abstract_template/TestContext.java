@@ -12,9 +12,10 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @EqualsAndHashCode
 public class TestContext {
-    private String preStr;
 
     private String postStr;
+
+    private String message;
 
     private boolean result;
 
