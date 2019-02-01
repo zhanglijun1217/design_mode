@@ -3,7 +3,8 @@ package daily.tools.abstract_template;
 import daily.tools.exception.BizException;
 
 /**
- * 抽象业务方法执行 操作模板方法定义在其中 子类实现biz和其中的方法即可
+ * 抽象业务方法执行 操作模板方法定义在其中 子类实现biz
+ * 参数应该是一个上下文这种东西
  *
  * @author 夸克
  * @date 2019/1/23 19:46
@@ -21,7 +22,7 @@ public abstract class AbstractProocessor<T> implements DomainProcessor<T> {
     }
 
     /**
-     * 业务处理
+     * 业务处理 这个是抽象方法 子类去实现具体的逻辑
      * @param context
      */
     protected abstract void bizHandle(T context);

@@ -1,7 +1,7 @@
 package daily.tools.abstract_template;
 
 /**
- * 业务处理方法
+ * 业务处理器
  *
  * @author 夸克
  * @date 2019/1/23 19:43
