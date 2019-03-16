@@ -13,3 +13,4 @@
 
 ## 装饰者模式
 - package decorator
+- blog地址：[装饰者模式](https://zhanglijun1217.github.io/blog/2019/03/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/)
